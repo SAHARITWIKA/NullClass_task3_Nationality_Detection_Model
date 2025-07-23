@@ -10,20 +10,41 @@ This project is developed as part of an AI internship program. The goal is to bu
 
 ## 📦 Project Structure
 
-├── app.py # Streamlit GUI
-├── preprocessor.py # Image preprocess logic
-├── requirements.txt
-├── models/ # Saved models (.h5 files)
-├── gui/ # GUI elements & layout
-├── train_nationality.ipynb
-├── train_emotion.ipynb
-├── train_age.ipynb
-├── train_dresscolor.ipynb
-└── dataset/
-├── nationality/
-├── emotion/
-├── age/
-└── dresscolor/
+TASK3/
+│
+├── data/ #  Datasets organized by purpose
+│ ├── crop_part1/ # UTKFace cropped dataset (age/nationality)
+│ ├── imdb_crop/ # IMDB dataset images
+│ ├── test/ # Test image samples
+│ ├── train/ # Training image samples
+│ ├── UTKFace/ # Raw UTKFace dataset
+│ └── utkface_aligned_cropped/ # Preprocessed aligned face dataset
+│
+├── evaluation_metrics/ #  Model evaluation metrics
+│ ├── emotion_confusion_matrix.png
+│ └── nationality_confusion_matrix.png
+|  #and many more
+│
+├── gui/
+│ └── app.py # GUI interface for running predictions
+│
+├── models/ #  Pre-trained models
+│ ├── emotion_model.h5 # Trained model for emotion prediction
+│ └── nationality_model.h5 # Trained model for nationality classification
+│  # after successfully run this came 
+|
+├── notebooks/ #  Jupyter Notebooks for training
+│ ├── train_age.ipynb # Train model for age prediction
+│ ├── train_dress_color.ipynb # Train model for dress color classification
+│ ├── train_emotion.ipynb # Train model for emotion detection
+│ └── train_nationality.ipynb # Train model for nationality classification
+│
+├── utils/
+│ ├── pycache/
+│ └── preprocess.py # Utility functions for preprocessing
+│
+└── requirements.txt #  Required Python packages
+
 
 
 
